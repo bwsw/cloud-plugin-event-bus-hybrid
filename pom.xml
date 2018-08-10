@@ -25,7 +25,7 @@
     <artifactId>cloud-plugin-event-bus-hybrid</artifactId>
     <version>4.11.1.0-SNAPSHOT</version>
     <name>Apache CloudStack Plugin - Hybrid Event Bus</name>
-    <description>API plugin for Apache CloudStack that provides hybrid event bus</description>
+    <description>Apache CloudStack plugin that provides hybrid event bus</description>
     <url>https://git.bw-sw.com/cloudstack-ecosystem/cloud-plugin-event-bus-hybrid</url>
 
     <licenses>
