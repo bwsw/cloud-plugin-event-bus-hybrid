@@ -2,6 +2,7 @@ Apache CloudStack Plugin - Hybrid Event Bus
 ===========================================
 
 This project provides hybrid event bus. This event bus allows to use different event buses for internal (inside Apache CloudStack) and external event notification.
+All events are published to both internal and external event buses. Subscribe/unsubscribe actions are executed on internal event bus only. 
 The version of the plugin matches Apache CloudStack version that it is build for.
 
 The plugin is developed and tested only with Apache CloudStack 4.11.1.
