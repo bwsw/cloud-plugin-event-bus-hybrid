@@ -11,8 +11,37 @@ The plugin is developed and tested only with Apache CloudStack 4.11.1.
 # Installing into CloudStack
 
 Download the plugin jar with dependencies file from OSS Nexus (https://oss.sonatype.org/content/groups/public/com/bwsw/cloud-plugin-event-bus-hybrid/) which corresponds to your ACS 
-version (e.g. 4.11.1.0), put it to lib directory and restart Management server. In Ubuntu installation which is based on deb package:
+version (e.g. 4.11.1.0), put it to lib directory, add [event bus configuration](http://docs.cloudstack.apache.org/projects/cloudstack-administration/en/4.11/events.html) and restart Management server. 
 
+An example of hybrid event bus configuration:
+```xml
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="eventNotificationBus" class="com.bwsw.cloudstack.event.bus.HybridEventBus">
+        <property name="name" value="eventNotificationBus"/>
+        <property name="internalEventBus">
+            <bean class="org.apache.cloudstack.mom.inmemory.InMemoryEventBus">
+                <property name="name" value="internalEventNotificationBus"/>
+            </bean>
+        </property>
+        <property name="externalEventBus">
+            <bean class="org.apache.cloudstack.mom.rabbitmq.RabbitMQEventBus">
+                <property name="name" value="externalEventNotificationBus"/>
+                <property name="server" value="127.0.0.1"/>
+                <property name="port" value="5672"/>
+                <property name="username" value="guest"/>
+                <property name="password" value="guest"/>
+                <property name="exchange" value="cloudstack-events"/>
+            </bean>
+        </property>
+    </bean>
+</beans>
+```
+
+To add plugin in Ubuntu installation which is based on deb package:
 ```
 cd /usr/share/cloudstack-management/lib/
 wget --trust-server-names "https://oss.sonatype.org/service/local/artifact/maven/redirect?r=snapshots&g=com.bwsw&a=cloud-plugin-event-bus-hybrid&c=jar-with-dependencies&v=4.11.1.0-SNAPSHOT"
