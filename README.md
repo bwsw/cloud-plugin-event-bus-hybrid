@@ -41,6 +41,7 @@ An example of hybrid event bus configuration:
     </bean>
 </beans>
 ```
+The configuration file `spring-event-bus-context.xml` with the content like specified above should be in `/etc/cloudstack/management/META-INF/cloudstack/core` directory.
 
 To add plugin in Ubuntu installation which is based on deb package:
 ```
