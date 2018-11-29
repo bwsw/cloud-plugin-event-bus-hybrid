@@ -46,7 +46,7 @@ The configuration file `spring-event-bus-context.xml` with the content like spec
 To add plugin in Ubuntu installation which is based on deb package:
 ```
 cd /usr/share/cloudstack-management/lib/
-wget --trust-server-names "https://oss.sonatype.org/service/local/artifact/maven/redirect?r=snapshots&g=com.bwsw&a=cloud-plugin-event-bus-hybrid&c=jar-with-dependencies&v=4.11.1.0-SNAPSHOT"
+wget --trust-server-names "https://oss.sonatype.org/service/local/artifact/maven/redirect?r=snapshots&g=com.bwsw&a=cloud-plugin-event-bus-hybrid&c=jar-with-dependencies&v=4.11.2.0-SNAPSHOT"
 service cloudstack-management stop
 service cloudstack-management start
 ```
