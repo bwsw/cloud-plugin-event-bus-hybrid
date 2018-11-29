@@ -15,7 +15,7 @@
 # specific language governing permissions and limitations
 # under the License.
 
-image: maven:3.5.4
+image: maven:3.5.3
 
 stages:
   - prepare
