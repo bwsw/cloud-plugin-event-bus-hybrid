@@ -40,7 +40,6 @@ cache:
 prepare:
   stage: prepare
   before_script:
-    - rm -Rf .m2/repository/* target/*
     - cd cloudstack
     - git checkout "$CLOUDSTACK_VERSION"
   script:
