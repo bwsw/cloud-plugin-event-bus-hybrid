@@ -5,14 +5,14 @@ This project provides hybrid event bus. This event bus allows to use different e
 All events are published to both internal and external event buses. Subscribe/unsubscribe actions are executed on internal event bus only. 
 The version of the plugin matches Apache CloudStack version that it is build for.
 
-The plugin is developed and tested only with Apache CloudStack 4.11.1.
+The plugin is developed and tested only with Apache CloudStack 4.11.2.
 
 * [Installing into CloudStack](#installing-into-cloudstack)
 
 # Installing into CloudStack
 
 Download the plugin jar with dependencies file from OSS Nexus (https://oss.sonatype.org/content/groups/public/com/bwsw/cloud-plugin-event-bus-hybrid/) which corresponds to your ACS 
-version (e.g. 4.11.1.0), put it to lib directory, add [event bus configuration](http://docs.cloudstack.apache.org/projects/cloudstack-administration/en/4.11/events.html) and restart Management server. 
+version (e.g. 4.11.2.0), put it to lib directory, add [event bus configuration](http://docs.cloudstack.apache.org/projects/cloudstack-administration/en/4.11/events.html) and restart Management server. 
 
 An example of hybrid event bus configuration:
 ```xml
@@ -46,7 +46,7 @@ The configuration file `spring-event-bus-context.xml` with the content like spec
 To add plugin in Ubuntu installation which is based on deb package:
 ```
 cd /usr/share/cloudstack-management/lib/
-wget --trust-server-names "https://oss.sonatype.org/service/local/artifact/maven/redirect?r=snapshots&g=com.bwsw&a=cloud-plugin-event-bus-hybrid&c=jar-with-dependencies&v=4.11.1.0-SNAPSHOT"
+wget --trust-server-names "https://oss.sonatype.org/service/local/artifact/maven/redirect?r=snapshots&g=com.bwsw&a=cloud-plugin-event-bus-hybrid&c=jar-with-dependencies&v=4.11.2.0-SNAPSHOT"
 service cloudstack-management stop
 service cloudstack-management start
 ```

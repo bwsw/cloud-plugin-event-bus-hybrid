@@ -23,7 +23,7 @@
 
     <groupId>com.bwsw</groupId>
     <artifactId>cloud-plugin-event-bus-hybrid</artifactId>
-    <version>4.11.1.0-SNAPSHOT</version>
+    <version>4.11.2.0-SNAPSHOT</version>
     <name>Apache CloudStack Plugin - Hybrid Event Bus</name>
     <description>Apache CloudStack plugin that provides hybrid event bus</description>
     <url>https://git.bw-sw.com/cloudstack-ecosystem/cloud-plugin-event-bus-hybrid</url>
@@ -56,7 +56,7 @@
     </scm>
 
     <properties>
-        <cloudstack.version>4.11.1.0</cloudstack.version>
+        <cloudstack.version>4.11.2.0</cloudstack.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
