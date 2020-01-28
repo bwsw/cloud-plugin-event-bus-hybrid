@@ -5,14 +5,14 @@ This project provides hybrid event bus. This event bus allows to use different e
 All events are published to both internal and external event buses. Subscribe/unsubscribe actions are executed on internal event bus only. 
 The version of the plugin matches Apache CloudStack version that it is build for.
 
-The plugin is developed and tested only with Apache CloudStack 4.11.2.
+The plugin is developed and tested only with Apache CloudStack 4.13.
 
 * [Installing into CloudStack](#installing-into-cloudstack)
 
 # Installing into CloudStack
 
 Download the plugin jar with dependencies file from OSS Nexus (https://oss.sonatype.org/content/groups/public/com/bwsw/cloud-plugin-event-bus-hybrid/) which corresponds to your ACS 
-version (e.g. 4.11.2.0), put it to lib directory, add [event bus configuration](http://docs.cloudstack.apache.org/projects/cloudstack-administration/en/4.11/events.html) and restart Management server. 
+version (e.g. 4.13), put it to lib directory, add [event bus configuration](http://docs.cloudstack.apache.org/projects/cloudstack-administration/en/4.13/events.html) and restart Management server. 
 
 An example of hybrid event bus configuration:
 ```xml
